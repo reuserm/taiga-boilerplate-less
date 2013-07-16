@@ -1,0 +1,20 @@
+{
+  "name": "taiga-boilerplate-less",
+  "version": "0.0.1",
+  "description": "Taiga boilerplate using LESS",
+  "main": "Gruntfile.js",
+  "author": "Ralf Schimmel <ralf.schimmel@topicus.nl>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/topicus-ini/taiga-boilerplate-less"
+  },
+  "dependencies": {
+    "grunt": "0.4.1",
+    "grunt-contrib-watch": "0.4.4",
+    "grunt-contrib-less": "0.6.4"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm":  "1.2.x"
+  }
+}
