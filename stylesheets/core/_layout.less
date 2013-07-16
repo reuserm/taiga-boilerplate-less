@@ -1,0 +1,72 @@
+/* BEGIN SASS
+// =========== Layout
+
+.l-full {
+    @include breakpoint(one) { @include grid(48, 1); }
+}
+.l-two-third {
+    @include breakpoint(one) { @include grid(32, 1); }
+}
+.l-half {
+    @include breakpoint(one) { @include grid(24, 1); }
+}
+.l-one-third {
+    @include breakpoint(one) { @include grid(16, 1);  }
+}
+.l-grid {
+    @include clearfix;
+    li { @include grid(16, 1); }
+}
+.l-first { clear: left; }
+
+div.container {
+    @include clearfix;
+    max-width: $max-width;
+    margin: auto;
+    padding: 1.5em;
+}
+
+// Example for modules.html
+header { @include grid(48, 1); }
+section {
+    @include clearfix;
+    margin-bottom: $vertical-spacing;
+    @include grid(48, 1);
+}
+//END SASS
+*/
+
+// =========== Layout
+
+.l-full {
+    .media-tablet-portrait { .mixin-grid(48, 1); }
+}
+.l-two-third {
+    .media-tablet-portrait { .mixin-grid(32, 1); }
+}
+.l-half {
+    .media-tablet-portrait { .mixin-grid(24, 1); }
+}
+.l-one-third {
+    .media-tablet-portrait { .mixin-grid(16, 1);  }
+}
+.l-grid {
+    .mixin-clearfix;
+    li { .mixin-grid(16, 1); }
+}
+.l-first { clear: left; }
+
+div.container {
+    .mixin-clearfix;
+    max-width: @max-width;
+    margin: auto;
+    padding: 1.5em;
+}
+
+// Example for modules.html
+header { .mixin-grid(48, 1); }
+section {
+    .mixin-clearfix;
+    margin-bottom: @vertical-spacing;
+    .mixin-grid(48, 1);
+}
