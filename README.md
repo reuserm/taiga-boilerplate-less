@@ -20,7 +20,13 @@ Set up Taiga Boilerplate
 ---------------------
 
 * Taiga Grid: The core of Taiga Boilerplate is Taiga Grid, so please read how to work with the grid first.
-* Sass: Download Sass and runn `sass --watch stylesheets:stylesheets --style compressed`.
+* Use the less compiler and change watcher from grunt
+
+````
+$ npm install
+$ grunt
+````
+
 * Modular CSS: Taiga Boilerplate works with modular CSS. To fully understand this principle you should read the Smacss book by Jonathan Snook.
 
 Thanks
