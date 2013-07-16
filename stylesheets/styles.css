@@ -1109,6 +1109,10 @@ li.form-error label:hover {
 }
 li.form-error input {
   border: 1px solid #d65223;
+  -webkit-box-shadow: 0px 0px 3px lighten(@color-error, 10%), inset 0 0 0;
+  -moz-box-shadow: 0px 0px 3px lighten(@color-error, 10%), inset 0 0 0;
+  -o-box-shadow: 0px 0px 3px lighten(@color-error, 10%), inset 0 0 0;
+  box-shadow: 0px 0px 3px lighten(@color-error, 10%), inset 0 0 0;
 }
 li.form-error input:focus {
   border: 1px solid #d65223;
