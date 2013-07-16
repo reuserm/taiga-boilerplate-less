@@ -1,25 +1,6 @@
-/* BEGIN SASS
-// =========== Icons
-
-%ico {
-    display: inline-block;
-    float: left;
-    height: 1em;
-    margin: 0.1em 0.4em 0 0;
-    overflow: hidden;
-    text-indent: -9999px;
-    width: 1em;
-}
-
-.ico-name {
-    @extend %ico;
-    background: url('../images/icons.png') 0px 0px no-repeat;
-}
-//END SASS
-*/
 /* =========== Icons */
 
-.ico, .ico-name {
+.ico {
     display: inline-block;
     float: left;
     height: 1em;
@@ -29,7 +10,6 @@
     width: 1em;
 }
 
-.ico-name {
-    //.ico;
-    background: url('../images/icons.png') 0px 0px no-repeat; 
+.ico-name:extend(.ico) {
+    background: url('../images/icons.png') 0px 0px no-repeat;
 }

@@ -1,72 +1,68 @@
-/* BEGIN SASS
 // =========== Layout
-
 .l-full {
-    @include breakpoint(one) { @include grid(48, 1); }
+    .breakpoint(one) { .grid(48, 1); }
 }
 .l-two-third {
-    @include breakpoint(one) { @include grid(32, 1); }
+    .breakpoint(one) { .grid(32, 1); }
 }
 .l-half {
-    @include breakpoint(one) { @include grid(24, 1); }
+    .breakpoint(one) { .grid(24, 1); }
 }
 .l-one-third {
-    @include breakpoint(one) { @include grid(16, 1);  }
+    .breakpoint(one) { .grid(16, 1);  }
 }
 .l-grid {
-    @include clearfix;
-    li { @include grid(16, 1); }
+    .clearfix;
+    li { .grid(16, 1); }
 }
 .l-first { clear: left; }
 
 div.container {
-    @include clearfix;
-    max-width: $max-width;
-    margin: auto;
-    padding: 1.5em;
-}
-
-// Example for modules.html
-header { @include grid(48, 1); }
-section {
-    @include clearfix;
-    margin-bottom: $vertical-spacing;
-    @include grid(48, 1);
-}
-//END SASS
-*/
-
-// =========== Layout
-
-.l-full {
-    .media-tablet-portrait { .mixin-grid(48, 1); }
-}
-.l-two-third {
-    .media-tablet-portrait { .mixin-grid(32, 1); }
-}
-.l-half {
-    .media-tablet-portrait { .mixin-grid(24, 1); }
-}
-.l-one-third {
-    .media-tablet-portrait { .mixin-grid(16, 1);  }
-}
-.l-grid {
-    .mixin-clearfix;
-    li { .mixin-grid(16, 1); }
-}
-.l-first { clear: left; }
-
-div.container {
-    .mixin-clearfix;
+    .clearfix;
     max-width: @max-width;
     margin: auto;
     padding: 1.5em;
 }
 
 // Example for modules.html
-header { .mixin-grid(48, 1); }
+header { .grid(48, 1); }
 section {
-    .mixin-clearfix;
+    .clearfix;
     margin-bottom: @vertical-spacing;
-    .mixin-grid(48, 1);
+    .grid(48, 1);
+}
+
+// =========== Layout
+
+.l-full {
+    .media-tablet-portrait { .grid(48, 1); }
+}
+.l-two-third {
+    .media-tablet-portrait { .grid(32, 1); }
+}
+.l-half {
+    .media-tablet-portrait { .grid(24, 1); }
+}
+.l-one-third {
+    .media-tablet-portrait { .grid(16, 1);  }
+}
+.l-grid {
+    .clearfix;
+    li { .grid(16, 1); }
+}
+.l-first { clear: left; }
+
+div.container {
+    .clearfix;
+    max-width: @max-width;
+    margin: auto;
+    padding: 1.5em;
+}
+
+// Example for modules.html
+header { .grid(48, 1); }
+section {
+    .clearfix;
+    margin-bottom: @vertical-spacing;
+    .grid(48, 1);
 }
