@@ -7,27 +7,32 @@
     padding: 0.1em 0.3em;
 }
 
-.label:extend(.label) {
+.label {
+    .label;
     color: @white;
     background: @color-brand;
 }
 
-.label-contrast:extend(.label) {
+.label-contrast {
+    .label;
     color: @white;
     background-color: lighten(@black, 15%);
 }
 
-.label-soft:extend(.label) {
+.label-soft {
+    .label;
     color: lighten(@black, 20%);
     background: lighten(@black, 80%);
 }
 
-.label-success:extend(.label) {
+.label-success {
+    .label;
     color: @white;
     background-color: @color-success;
 }
 
-.label-alert:extend(.label) {
+.label-alert {
+    .label;
     color: @white;
     background-color: @color-alert;
 }

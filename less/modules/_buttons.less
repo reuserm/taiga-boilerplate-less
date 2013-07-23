@@ -34,7 +34,8 @@ div.buttons {
 
 .button,
 input[type=submit],
-button:extend(.button) {
+button {
+    .button;
     color: @white;
     background: @color-brand;
     &:hover { background: darken(@color-brand, 5%); }
@@ -48,7 +49,8 @@ button:extend(.button) {
 // The dark button
 .button-contrast,
 input[type=submit].button-contrast,
-button.button-contrast:extend(.button) {
+button.button-contrast {
+    .button;
     color: @white;
     background-color: lighten(@black, 15%);
     &:hover { background-color: @black; }
@@ -63,7 +65,8 @@ button.button-contrast:extend(.button) {
 // The soft grey button
 .button-soft,
 input[type=submit].button-soft,
-button.button-soft:extend(.button) {
+button.button-soft {
+    .button;
     color: lighten(@black, 20%);
     background: lighten(@black, 80%);
     &:hover {
@@ -79,7 +82,8 @@ button.button-soft:extend(.button) {
 
 .button-success,
 input[type=submit].button-success,
-button.button-success:extend(.button) {
+button.button-success {
+    .button;
     color: @white;
     background-color: @color-success;
     &:hover {
@@ -95,7 +99,8 @@ button.button-success:extend(.button) {
 
 .button-alert,
 input[type=submit].button-alert,
-button.button-alert:extend(.button) {
+button.button-alert {
+    .button;
     color: @white;
     background-color: @color-alert;
     &:hover {

@@ -4,7 +4,7 @@ ul.messages  {
     margin: 0 0 @vertical-spacing 0;
 }
 
-li.message {
+.limessage {
     .border-radius(0.2em);
     font-weight: bold;
     margin-bottom: 0.25em;
@@ -13,17 +13,20 @@ li.message {
     padding: 0.35em 0.75em 0.45em 0.75em;
 }
 
-li.message:extend(li.message) {
+li.message {
+    .limessage;
     color: lighten(@black, 20%);
     background: lighten(@black, 80%);
 }
 
-li.message-success:extend(li.message) {
+li.message-success {
+    .limessage;
     color: @white;
     background: @color-success;
 }
 
-li.message-alert:extend(li.message) {
+li.message-alert {
+    .limessage;
     color: @white;
     background: @color-alert;
 }
