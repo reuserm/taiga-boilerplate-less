@@ -1,0 +1,131 @@
+// =========== Forms
+
+input[type=search] { -webkit-appearance: textfield; }
+input[type=search]::-webkit-search-decoration { -webkit-appearance: none; }
+
+input[type=text],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=email],
+input[type=tel],
+input[type=url],
+textarea,
+select {
+    -webkit-appearance: none;
+    border: 1px solid lighten(@black, 65%);
+    border-radius: @border-radius;
+    box-shadow: inset 0px 1px 3px rgba($black, 0.1);
+    color: #333;
+    display: block;
+    font-family: @font-base;
+    font-size: inherit;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0.6em;
+    vertical-align: baseline;
+    width: 100% !important;
+
+    .mixin-transition(border 0.1s);
+
+    &:focus {
+        border: 1px solid lighten(@black, 55%);
+        box-shadow: 0px 0px 4px rgba($black, 0.3);
+        color: #333;
+        outline: 0;
+    }
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+    vertical-align: top;
+    display: block;
+}
+
+form {  }
+
+fieldset {  }
+
+legend {
+    border: 0;
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    font-size: 1.4rem;
+}
+
+ul.form {
+    clear: both;
+    list-style: none;
+    margin: 0 0 @vertical-spacing 0;
+
+    > li { .mixin-clearfix; }
+
+    > li > label {
+        clear: left;
+        cursor: pointer;
+        display: block;
+        font-weight: bold;
+        padding-top: 0.6rem;
+        text-align: left;
+
+        @media only screen and (min-width: @breakpoint-one) {
+            .mixin-grid(16, 0, 1);
+            text-align: right;
+        }
+
+        &:hover { color: @black; }
+    }
+
+    div.form-fields {
+        margin-bottom: 0.5em;
+
+        @media only screen and (min-width: @breakpoint-one) {
+            .mixin-grid(32, 0, 0);
+        }
+
+        p, small {
+            display: block;
+            margin: 0.25rem 0;
+        }
+        p.form-description { margin: 0.6rem 0; }
+    }
+}
+
+ul.form-checklist {
+    list-style: none;
+    margin: 0.6rem 0;
+    li { margin: 0.5rem 0; }
+    input {
+        display: inline;
+        margin-right: 0.8rem;
+    }
+    label {
+        .mixin-grid-reset;
+        font-weight: normal;
+        &:hover {
+            color: #000;
+            cursor: pointer;
+        }
+    }
+}
+
+li.form-error {
+    label {
+        color: @color-alert;
+        &:hover { color: darken(@color-alert, 25%); }
+    }
+    input {
+        border: 1px solid @color-alert;
+         box-shadow: 0px 0px 3px lighten(@color-alert, 10%), inset 0 0 0;
+        &:focus { border: 1px solid @color-alert; }
+    }
+    ul.form-errors {
+        color: @color-alert;
+        list-style: none;
+        margin: 0.35em 0;
+        li { font-size: 0.85rem; }
+    }
+}

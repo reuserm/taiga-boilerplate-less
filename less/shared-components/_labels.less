@@ -1,0 +1,42 @@
+// =========== Label
+
+.include-label {
+    @include border-radius(0.2em);
+    font-size: 0.75em;
+    font-weight: bold;
+    padding: 0.1em 0.3em;
+}
+
+.label {
+    .include-label;
+    color: @white;
+    background: @color-brand;
+    -webkit-font-smoothing: antialiased;
+}
+
+.label-contrast {
+    .include-label;
+    color: @white;
+    background-color: lighten(@black, 15%);
+    -webkit-font-smoothing: antialiased;
+}
+
+.label-soft {
+    .include-label;
+    color: lighten(@black, 20%);
+    background: lighten(@black, 80%);
+}
+
+.label-success {
+    .include-label;
+    color: @white;
+    background-color: @color-success;
+    -webkit-font-smoothing: antialiased;
+}
+
+.label-alert {
+    .include-label;
+    color: @white;
+    background-color: @color-alert;
+    -webkit-font-smoothing: antialiased;
+}

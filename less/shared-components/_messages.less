@@ -1,0 +1,40 @@
+// =========== Messages
+
+ul.messages,
+div.message {
+    list-style: none;
+    margin: 0 0 @vertical-spacing 0;
+}
+
+.include-message {
+    border-radius: $border-radius;
+    display: block;
+    font-weight: bold;
+    line-height: 1.5rem;
+    margin-bottom: 0.25rem;
+    padding: 0.4rem 0.75rem;
+    vertical-align: baseline;
+}
+
+li.message,
+div.message {
+    .include-message;
+    background: @gray;
+    color: lighten(@black, 20%);
+}
+
+li.message-success,
+div.message-success {
+    .include-message;
+    background: @color-success;
+    color: @white;
+    -webkit-font-smoothing: antialiased;
+}
+
+li.message-alert,
+div.message-alert {
+    .include-message;
+    background: @color-alert;
+    color: @white;
+    -webkit-font-smoothing: antialiased;
+}
