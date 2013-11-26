@@ -19,9 +19,10 @@ html {
 }
 
 body {
+    height: 100%;
+    background: lighten(@gray, 10%);
     line-height: 1.5rem;
-    .breakpoint(one) { font-size: @font-size + 1; }
-    .breakpoint(two) { font-size: @font-size + 2; }
+    @media @breakpoint-two { font-size: @font-size + 1; }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -87,7 +88,7 @@ dl {
     dd { margin-left: @vertical-spacing; }
 
     &.advanced {
-        dt { .grid(16, 0, 1); }
-        dd { .grid(32); }
+        dt { .mixin-grid(16, 0, 1); }
+        dd { .mixin-grid(32); }
     }
 }

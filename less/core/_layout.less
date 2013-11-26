@@ -1,16 +1,16 @@
 /// =========== Layout
 
 .l-full {
-    @media only screen and (min-width: @breakpoint-one) { .mixin-grid(48, 1, 1); }
+    @media @breakpoint-one { .mixin-grid(48, 1, 1); }
 }
 .l-two-third {
-    media only screen and (min-width: @breakpoint-one) { .mixin-grid(32, 1, 1); }
+    @media @breakpoint-one { .mixin-grid(32, 1, 1); }
 }
 .l-half {
-    media only screen and (min-width: @breakpoint-three) { .mixin-grid(24, 1, 1); }
+    @media @breakpoint-three { .mixin-grid(24, 1, 1); }
 }
 .l-one-third {
-    media only screen and (min-width: @breakpoint-one) { .mixin-grid(16, 1, 1); }
+    @media @breakpoint-one { .mixin-grid(16, 1, 1); }
 }
 .l-grid {
     .mixin-clearfix;
